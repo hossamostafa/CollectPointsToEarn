@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740211582923",
+    "project_id": "pointscollector-5dbe9",
+    "storage_bucket": "pointscollector-5dbe9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740211582923:android:a1e306561791174b9bb84e",
+        "android_client_info": {
+          "package_name": "com.koshy.collectpoints"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740211582923-t1621bjf6evcff26ng3tdt9r526ib648.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO5UTlLtd0Zr4Pq-RCrVVeGFW1OyrtjLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740211582923-t1621bjf6evcff26ng3tdt9r526ib648.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
