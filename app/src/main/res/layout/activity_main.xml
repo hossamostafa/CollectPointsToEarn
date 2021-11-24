@@ -6,12 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="150sp"
+    android:layout_height="100sp"
     android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
@@ -23,14 +20,81 @@
         />
     <Button
         android:layout_width="150sp"
-        android:textColor="@color/MainColor"
         android:layout_height="wrap_content"
         android:layout_marginStart="50sp"
+        android:textSize="10sp"
         android:id="@+id/result"
         android:background="@drawable/border"
-        android:text="Result"/>
-
+        android:text="Collect Daily Rewards "/>
 </LinearLayout>
-    </FrameLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:background="#E91E63"
+        android:layout_marginBottom="25sp"
+       />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:background="@drawable/border2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@color/MainColor"
+        android:layout_margin="15dp"
+        android:text="@string/complete_offerswalls"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/MainColor"
+        android:text="@string/Note"/>
+      <FrameLayout
+          android:layout_width="350sp"
+          android:layout_margin="15dp"
+          android:layout_height="200sp"
+          android:layout_gravity="center"
+          android:id="@+id/relative_border"
+          android:background="@drawable/border3">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+          <ImageButton
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="15dp"
+              android:id="@+id/gemiplay_image"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/gemiplay_website"
+        android:textColor="@color/MainColor"/>
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:gravity="center"
+                  android:text="get more points with Gemiplay Web"
+                  android:textColor="@color/MainColor"/>
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:background="@drawable/border2"
+                  android:layout_margin="15dp"
+                  android:id="@+id/start"
+                  android:text="Start"
+                  android:textSize="15dp"
+                  />
+          </LinearLayout>
+      </FrameLayout>
 </LinearLayout>
