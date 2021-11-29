@@ -110,7 +110,7 @@
                 app:passwordToggleEnabled="true">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/password"
+                    android:id="@+id/password_log"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
@@ -126,7 +126,8 @@
             android:layout_gravity="end"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            android:text="Forget Passwoed?"
+            android:text="Forget Password?"
+            android:id="@+id/forget_pass"
             android:textColor="@color/mainColor" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -135,6 +136,7 @@
             android:layout_marginTop="60dp"
             android:background="@drawable/buttonstyle"
             android:text="Login"
+            android:id="@+id/btn_log"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -146,6 +148,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
+            android:id="@+id/register_now"
             android:text="New user?Register Now"
             android:textColor="@color/mainColor" />
 

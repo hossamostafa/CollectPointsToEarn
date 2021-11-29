@@ -12,17 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollectPoints">
+        <activity android:name=".ForgetPassword"></activity>
         <activity
             android:name=".Setting"
             android:exported="true" />
         <activity
             android:name=".Register"
             android:exported="true" />
-
         <activity
             android:name=".Login"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"

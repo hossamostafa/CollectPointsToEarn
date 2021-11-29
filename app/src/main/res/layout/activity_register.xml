@@ -163,7 +163,7 @@
                 app:hintTextColor="#6ab7ff"
                 app:passwordToggleEnabled="true">
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/password"
+                    android:id="@+id/password_reg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPassword"
@@ -219,6 +219,7 @@
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Register"
+            android:id="@+id/btn_reg"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="18sp"
