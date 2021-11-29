@@ -3,15 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CollectPoints/app/src/main/res/drawable/add_dialog_bg.xml" value="0.221875" />
+        <entry key="..\:/CollectPoints/app/src/main/res/drawable/border.xml" value="0.2359375" />
         <entry key="..\:/CollectPoints/app/src/main/res/drawable/border2.xml" value="0.11302083333333333" />
         <entry key="..\:/CollectPoints/app/src/main/res/drawable/border3.xml" value="0.11302083333333333" />
         <entry key="..\:/CollectPoints/app/src/main/res/drawable/container_bg.xml" value="0.221875" />
         <entry key="..\:/CollectPoints/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.21666666666666667" />
+        <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_daily_offers.xml" value="0.19010416666666666" />
         <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_main2.xml" value="0.21979166666666666" />
         <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_main3.xml" value="0.19166666666666668" />
         <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/CollectPoints/app/src/main/res/layout/activity_setting.xml" value="0.20572916666666666" />
+        <entry key="..\:/CollectPoints/app/src/main/res/layout/add_container_dialog.xml" value="0.20572916666666666" />
         <entry key="..\:/CollectPoints/app/src/main/res/layout/container_item.xml" value="0.25" />
       </map>
     </option>

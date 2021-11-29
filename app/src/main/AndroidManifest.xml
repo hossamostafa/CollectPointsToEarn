@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollectPoints">
-        <activity android:name=".ForgetPassword"></activity>
+        <activity
+            android:name=".ui.DailyOffersActivity"
+            android:exported="true" />
         <activity
             android:name=".Setting"
             android:exported="true" />

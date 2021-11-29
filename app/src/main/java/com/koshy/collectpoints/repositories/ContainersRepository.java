@@ -61,9 +61,35 @@ public class ContainersRepository {
                 });
 
     }
+
     private void addListener(){
-        firestore.collection("phonesPrice")
-                .orderBy("PhoneId", Query.Direction.ASCENDING)
+        firestore.collection("containersData")
+//                .orderBy("PhoneId", Query.Direction.ASCENDING)
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if (error != null){
+                            Log.d("cocacola", "Listen failed: ", error);
+                            return;
+                        }
+                        ArrayList<ContainerModel> matchItemList = new ArrayList<>();
+                        for (QueryDocumentSnapshot doc : value){
+                            String fireId = doc.getString("fireId");
+                            String img = doc.getString("img");
+                            String name = doc.getString("name");
+                            String link = doc.getString("link") ;
+                            ContainerModel cm = new ContainerModel(img, name, link);
+                            cm.setFireId(fireId);
+                            matchItemList.add(cm);
+                        }
+                        returnValueListener.returnList(matchItemList,true);
+                    }
+                });
+    }
+
+    private void addUserListener(){
+        firestore.collection("userData")
+//                .orderBy("PhoneId", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

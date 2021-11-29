@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.koshy.collectpoints.R;
 import com.koshy.collectpoints.models.ContainerModel;
 
@@ -64,7 +66,7 @@ public class ContainersAdapter extends RecyclerView.Adapter<ContainersAdapter.Co
     public void onBindViewHolder(@NonNull ContainersAdapter.ContainerVH holder, int position) {
         ContainerModel PhoneDataModel = phoneDataModelArrayList.get(position);
 //        holder.teamAImage.setImageResource(context.getResources().getIdentifier(dollarModel.getTeam_a_image(), "drawable", context.getPackageName()));
-//        Glide.with(context).load(PhoneDataModel.getImgUrl()).into(holder.phoneImage);
+        Glide.with(context).load(PhoneDataModel.getImg()).into(holder.cImage);
         holder.cName.setText(PhoneDataModel.getName());
     }
 
@@ -74,22 +76,23 @@ public class ContainersAdapter extends RecyclerView.Adapter<ContainersAdapter.Co
     }
 
     class ContainerVH extends RecyclerView.ViewHolder {
-        LinearLayout parent;
+        CardView parent;
         ImageView cImage;
         TextView cName;
 
         public ContainerVH(@NonNull View itemView) {
             super(itemView);
 
-            parent = (LinearLayout) itemView.findViewById(R.id.container_card);
+            parent = (CardView) itemView.findViewById(R.id.container_card);
             cImage = (ImageView) itemView.findViewById(R.id.img);
             cName = (TextView) itemView.findViewById(R.id.comName);
-
+            parent.setOnClickListener(v->{
+                onPopupClickListener.onConClicked(getAdapterPosition(), phoneDataModelArrayList.get(getAdapterPosition()));
+            });
             /*parent.setOnLongClickListener(view -> {
 //                showPopupMenu(view, getAdapterPosition());
                 return false;
             });*/
-
         }
     }
 
@@ -111,6 +114,7 @@ public class ContainersAdapter extends RecyclerView.Adapter<ContainersAdapter.Co
         void onDeleteClicked(int pos, String matchID);
 
         void onEditClicked(int pos, ContainerModel model);
+        void onConClicked(int pos, ContainerModel model);
     }
 
     public void setOnPopupClickListener(ContainersAdapter.TOnPopupMenuClickListener onPopupClickListener) {

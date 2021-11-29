@@ -14,7 +14,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:background="@drawable/container_bg">
             <ImageView
                 android:id="@+id/img"
                 android:layout_width="match_parent"
@@ -24,16 +26,18 @@
                 android:id="@+id/comName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="com name"
                 android:textStyle="bold"
-                android:textSize="14sp"
-                android:textColor="#65E91E"/>
+                android:textSize="16sp"
+                android:textColor="#E91E63"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="com name"
+                android:gravity="center"
+                android:text="View Offers"
                 android:textStyle="bold"
                 android:textSize="11sp"
-                android:textColor="#65E91E"/>
+                android:textColor="#E91E63"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -11,16 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContainersViewModel extends ViewModel {
-    public MutableLiveData<List<ContainerModel>> phListMutableLiveData;
+    public MutableLiveData<List<ContainerModel>> conListMutableLiveData;
     ContainersRepository containersRepository;
  
     public ContainersViewModel() {
         containersRepository = new ContainersRepository();
     }
 
-    public LiveData<ContainerModel> getPhoneData(){
-        if (phListMutableLiveData == null){
-            phListMutableLiveData = new MutableLiveData<>();
+    public LiveData<ContainerModel> getContainerData(){
+        if (conListMutableLiveData == null){
+            conListMutableLiveData = new MutableLiveData<>();
             containersRepository.setOnReturnValueListener(new ContainersRepository.ReturnValueListener() {
                 @Override
                 public void returnList(ArrayList<ContainerModel> list, boolean auto) {
@@ -33,10 +33,10 @@ public class ContainersViewModel extends ViewModel {
 
     private void getMatchdata(ArrayList<ContainerModel> list, boolean auto){
         if (auto) {
-            if (list != null || list.size() > 0) phListMutableLiveData.setValue(list);
+            if (list != null || list.size() > 0) conListMutableLiveData.setValue(list);
         } else {
-            ArrayList<ContainerModel> phoneDataModels = containersRepository.getMatchItems();
-            phListMutableLiveData.setValue(phoneDataModels);
+            ArrayList<ContainerModel> conDataModels = containersRepository.getMatchItems();
+            conListMutableLiveData.setValue(conDataModels);
         }
     }
 }
